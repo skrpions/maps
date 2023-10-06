@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-04-2022 a las 10:49:43
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 7.3.26
+-- Tiempo de generación: 06-10-2023 a las 04:26:50
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,19 +29,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `mapa` (
   `idmapa` int(11) NOT NULL,
-  `persona` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
-  `descripcion` varchar(200) COLLATE utf8_spanish2_ci NOT NULL,
-  `lat` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
-  `lng` varchar(100) COLLATE utf8_spanish2_ci NOT NULL
+  `cuenca` varchar(100) NOT NULL,
+  `descripcion` varchar(200) NOT NULL,
+  `videoUrl` varchar(400) NOT NULL,
+  `lat` varchar(100) NOT NULL,
+  `lng` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `mapa`
 --
 
-INSERT INTO `mapa` (`idmapa`, `persona`, `descripcion`, `lat`, `lng`) VALUES
-(1, 'Gerson Gonzalez', 'Hola soy un programador', '15.783471', '-90.230759'),
-(2, 'GB', 'Aquí vivo XD', '14.6329', '-89.9886');
+INSERT INTO `mapa` (`idmapa`, `cuenca`, `descripcion`, `videoUrl`, `lat`, `lng`) VALUES
+(5, 'Shazam', 'Shazam', 'https://youtu.be/-okRQLVx9sQ', '2.3965122', '-76.7464101');
 
 --
 -- Índices para tablas volcadas
@@ -61,7 +61,7 @@ ALTER TABLE `mapa`
 -- AUTO_INCREMENT de la tabla `mapa`
 --
 ALTER TABLE `mapa`
-  MODIFY `idmapa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idmapa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
